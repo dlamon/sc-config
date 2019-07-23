@@ -1,0 +1,12 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: sc-config
+  cloud:
+    consul:
+      host: 192.168.99.103
+      port: 8500
+      discovery:
+        enabled: true
+        instance-id: sc-config
