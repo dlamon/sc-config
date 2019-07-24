@@ -10,3 +10,8 @@ spring:
       discovery:
         enabled: true
         instance-id: sc-config
+    config:
+      server:
+        git:
+          uri: https://github.com/dlamon/sc-config-repository.git
+          basedir: ./basedir
