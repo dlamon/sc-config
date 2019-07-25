@@ -2,16 +2,13 @@ server:
   port: 8090
 spring:
   application:
-    name: sc-config
+    name: config
   cloud:
     consul:
       host: 192.168.99.103
       port: 8500
-      discovery:
-        enabled: true
-        instance-id: sc-config
     config:
       server:
         git:
-          uri: https://github.com/dlamon/sc-config-repository.git
+          uri: http://192.168.99.108/sc-projects/sc-config-repository.git
           basedir: ./basedir
