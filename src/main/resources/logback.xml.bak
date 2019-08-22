@@ -4,13 +4,13 @@
     <contextName>logback</contextName>
     <jmxConfigurator/>
 
-    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>
-                %d - %msg%n
-            </pattern>
-        </layout>
-    </appender>
+    <!--<appender name="console" class="ch.qos.logback.core.ConsoleAppender">-->
+        <!--&lt;!&ndash;<layout class="ch.qos.logback.classic.PatternLayout">&ndash;&gt;-->
+            <!--&lt;!&ndash;<pattern>&ndash;&gt;-->
+                <!--&lt;!&ndash;%d - %msg%n&ndash;&gt;-->
+            <!--&lt;!&ndash;</pattern>&ndash;&gt;-->
+        <!--&lt;!&ndash;</layout>&ndash;&gt;-->
+    <!--</appender>-->
 
     <appender name="gelf" class="de.siegmar.logbackgelf.GelfUdpAppender">
         <graylogHost>192.168.99.108</graylogHost>
@@ -25,12 +25,12 @@
             <includeCallerData>true</includeCallerData>
             <includeRootCauseData>true</includeRootCauseData>
             <includeLevelName>true</includeLevelName>
-            <shortPatternLayout class="ch.qos.logback.classic.PatternLayout">
-                <pattern>%m%nopex</pattern>
-            </shortPatternLayout>
-            <fullPatternLayout class="ch.qos.logback.classic.PatternLayout">
-                <pattern>%m%n</pattern>
-            </fullPatternLayout>
+            <!--<shortPatternLayout class="ch.qos.logback.classic.PatternLayout">-->
+                <!--<pattern>%m%nopex</pattern>-->
+            <!--</shortPatternLayout>-->
+            <!--<fullPatternLayout class="ch.qos.logback.classic.PatternLayout">-->
+                <!--<pattern>%m%n</pattern>-->
+            <!--</fullPatternLayout>-->
             <numbersAsString>false</numbersAsString>
             <staticField>app_name:sc-config</staticField>
             <staticField>os_arch:${os.arch}</staticField>
@@ -41,7 +41,7 @@
 
     <root level="INFO">
         <appender-ref ref="gelf" />
-        <appender-ref ref="console" />
+        <!--<appender-ref ref="console" />-->
     </root>
 
 </configuration>
