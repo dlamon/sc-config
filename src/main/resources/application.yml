@@ -11,7 +11,7 @@ spring:
       server:
         git:
           uri: http://192.168.99.108/sc-projects/sc-config-repository.git
-          basedir: ./basedir
+          basedir: ./sc-config/basedir
     bus:
       ack:
         enabled: true
@@ -22,3 +22,7 @@ management:
     web:
       exposure:
         include: ["health", "info", "bus-refresh"]
+logging:
+  graylog:
+    host: 192.168.99.108
+    port: 12201
