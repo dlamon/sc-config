@@ -10,7 +10,7 @@ spring:
     config:
       server:
         git:
-          uri: http://192.168.99.108/sc-projects/sc-config-repository.git
+          uri: https://github.com/dlamon/sc-config-repository.git
           basedir: ./sc-config/basedir
     bus:
       ack:
